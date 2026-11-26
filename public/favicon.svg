@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="none">
+  <rect width="256" height="256" rx="56" fill="#163D3A" />
+  <g transform="translate(20, 74) scale(0.5745)">
+    <!-- Inner left triangle peak -->
+    <path
+      d="M 68 184 L 103 136 Q 107 131 111 136 L 152 184 Z"
+      fill="#F6F3EA"
+    />
+    <!-- Left interlocking arch & lower partnership clasp -->
+    <path
+      d="M 3 184 L 63 95 C 81 67 128 67 148 95 L 207 160 Q 209 162 211 160 L 253 113 L 272 140 Q 273 142 271 145 L 238 181 C 234 184 228 184 222 184 L 192 184 C 186 184 181 184 177 180 L 116 115 C 110 109 100 109 94 116 L 46 184 Z"
+      fill="#F6F3EA"
+    />
+    <!-- Right ascending summit arch -->
+    <path
+      d="M 135 65 L 173 18 C 190 -2 221 -2 238 18 L 373 184 L 331 184 L 214 46 C 209 41 202 41 198 46 L 164 83 C 155 75 145 69 135 65 Z"
+      fill="#F6F3EA"
+    />
+    <!-- Brass Gold four-point concave diamond -->
+    <path
+      d="M 207 68 Q 212 94 234 99 Q 212 104 207 130 Q 202 104 180 99 Q 202 94 207 68 Z"
+      fill="#C7A56A"
+    />
+  </g>
+</svg>
