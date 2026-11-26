@@ -297,7 +297,7 @@ export const ContactPage: React.FC = () => {
                         color: 'var(--rovela-gold)'
                       }}
                     >
-                      Official Electronic Mail
+                      Email Us
                     </span>
                     <a
                       href={`mailto:${OFFICIAL_EMAIL}`}
@@ -316,7 +316,7 @@ export const ContactPage: React.FC = () => {
                         marginTop: '0.15rem'
                       }}
                     >
-                      For project proposals, partnerships &amp; general enquiries
+                      For project enquiries, partnerships &amp; support
                     </p>
                   </div>
                 </li>
@@ -337,7 +337,7 @@ export const ContactPage: React.FC = () => {
                         color: 'var(--rovela-gold)'
                       }}
                     >
-                      Digital &amp; Global Coordination Desk
+                      Official Website
                     </span>
                     <span
                       style={{
@@ -355,7 +355,7 @@ export const ContactPage: React.FC = () => {
                         marginTop: '0.15rem'
                       }}
                     >
-                      International remote &amp; client-site delivery
+                      Available for remote &amp; on-site client projects
                     </p>
                   </div>
                 </li>
@@ -376,7 +376,7 @@ export const ContactPage: React.FC = () => {
                         color: 'var(--rovela-gold)'
                       }}
                     >
-                      Consultation Availability
+                      Business Hours
                     </span>
                     <span
                       style={{
@@ -385,7 +385,7 @@ export const ContactPage: React.FC = () => {
                         fontSize: '1rem'
                       }}
                     >
-                      Monday to Friday · Standard Business Hours
+                      Monday to Friday · 9:00 AM to 6:00 PM
                     </span>
                     <p
                       style={{

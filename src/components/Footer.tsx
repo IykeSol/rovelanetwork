@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowUpRight, Mail, Globe, ShieldCheck } from 'lucide-react';
+import { ArrowUpRight, Mail, Globe, Clock } from 'lucide-react';
 import { RovelaLogo, RovelaSymbolSvg } from './RovelaLogo';
 import { SERVICES_DATA, SOCIAL_LINKS } from '../data/siteData';
 
@@ -165,34 +165,34 @@ export const Footer: React.FC = () => {
           </div>
 
           <div className="site-footer__col">
-            <h4 className="site-footer__heading">Direct Channels</h4>
+            <h4 className="site-footer__heading">Contact Us</h4>
             <ul className="site-footer__contact-list">
               <li>
                 <Mail size={16} className="site-footer__icon" aria-hidden="true" />
                 <div>
-                  <span className="site-footer__contact-label">General Enquiries</span>
+                  <span className="site-footer__contact-label">Email Us</span>
                   <a href="mailto:contact@rovelanetwork.com">contact@rovelanetwork.com</a>
                 </div>
               </li>
               <li>
                 <Globe size={16} className="site-footer__icon" aria-hidden="true" />
                 <div>
-                  <span className="site-footer__contact-label">Operating Model</span>
-                  <span>International Digital &amp; Advisory Practice</span>
+                  <span className="site-footer__contact-label">Website</span>
+                  <a href="https://www.rovelanetwork.com">www.rovelanetwork.com</a>
                 </div>
               </li>
               <li>
-                <ShieldCheck size={16} className="site-footer__icon" aria-hidden="true" />
+                <Clock size={16} className="site-footer__icon" aria-hidden="true" />
                 <div>
-                  <span className="site-footer__contact-label">Engagement Standards</span>
-                  <span>Confidential, Value-Driven Execution</span>
+                  <span className="site-footer__contact-label">Business Hours</span>
+                  <span>Mon to Fri, 9:00 AM to 6:00 PM</span>
                 </div>
               </li>
             </ul>
 
             <div className="site-footer__socials">
               <span className="site-footer__contact-label">
-                Official Social Channels
+                Follow Us
               </span>
               <div className="site-footer__social-links">
                 {SOCIAL_LINKS.map((social) => (
