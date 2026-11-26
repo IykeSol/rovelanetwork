@@ -411,14 +411,7 @@ export const AboutPage: React.FC = () => {
                 disconnected handoffs:
               </p>
 
-              <div
-                style={{
-                  display: 'grid',
-                  gridTemplateColumns: '1fr 1fr',
-                  gap: '1.25rem',
-                  marginBottom: '2rem'
-                }}
-              >
+              <div className="about-feature-pair">
                 <div
                   style={{
                     padding: '1.25rem',

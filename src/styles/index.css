@@ -379,9 +379,12 @@ h6 {
   font-family: var(--font-heading);
   font-weight: 600;
   font-size: 0.8125rem;
-  letter-spacing: 0.12em;
+  line-height: 1.35;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  padding: 0.95rem 1.65rem;
+  text-align: center;
+  padding: 0.95rem 1.5rem;
+  max-width: 100%;
   border-radius: var(--radius-sm);
   border: 1px solid transparent;
   cursor: pointer;
@@ -391,7 +394,7 @@ h6 {
     border-color var(--transition-base),
     transform var(--transition-base),
     box-shadow var(--transition-base);
-  white-space: nowrap;
+  white-space: normal;
 }
 
 .btn:active {
@@ -1482,6 +1485,30 @@ h6 {
   margin-bottom: 2rem;
 }
 
+.service-detail-card__subpanel {
+  padding: clamp(1.1rem, 2.8vw, 1.65rem);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-on-ivory);
+}
+
+.service-detail-card__subpanel--ivory {
+  background-color: var(--rovela-ivory);
+}
+
+.service-detail-card__subpanel--sage {
+  background-color: var(--rovela-sage-surface);
+}
+
+.service-detail-card__footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border-on-ivory);
+}
+
 .service-detail-card__value-banner {
   background-color: var(--rovela-teal);
   color: var(--rovela-ivory);
@@ -1992,6 +2019,13 @@ h6 {
   color: var(--rovela-ivory);
 }
 
+.about-feature-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
 /* ==========================================================================
    RESPONSIVE BREAKPOINTS (Desktop, Laptop, Tablet, Mobile)
    ========================================================================== */
@@ -2050,6 +2084,19 @@ h6 {
 @media (max-width: 640px) {
   :root {
     --header-height: 72px;
+    --container-pad: 1rem;
+    --section-pad-y: 3.5rem;
+  }
+
+  .btn {
+    padding: 0.85rem 1.15rem;
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+  }
+
+  .btn--sm {
+    padding: 0.75rem 1rem;
+    font-size: 0.725rem;
   }
 
   .hero__pillars-bar,
@@ -2058,18 +2105,118 @@ h6 {
   .industries-grid,
   .form-grid,
   .site-footer__grid,
-  .site-footer__list--two-col {
+  .site-footer__list--two-col,
+  .about-feature-pair {
     grid-template-columns: 1fr;
   }
 
   .rovela-syllable-item {
-    grid-template-columns: 64px 1fr;
-    gap: 1rem;
+    grid-template-columns: 56px 1fr;
+    gap: 0.875rem;
+    padding-block: 1.25rem;
+  }
+
+  .rovela-syllable-code {
+    font-size: 1.85rem;
+  }
+
+  .brand-equation-bar {
+    padding: 1rem 1.15rem;
+    justify-content: center;
+    text-align: center;
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+  }
+
+  .hero__visual-card {
+    padding: 0.5rem;
+  }
+
+  .hero__visual-overlay {
+    padding: 0.85rem;
+  }
+
+  .hero__visual-caption {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.65rem;
+  }
+
+  .editorial-image-frame__caption {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 0.85rem 1rem;
+    font-size: 0.75rem;
+  }
+
+  .pillar-card,
+  .capability-card,
+  .industry-card,
+  .approach-step-card,
+  .approach-detail-card,
+  .contact-info-panel,
+  .contact-form-card,
+  .site-footer__cta-card {
+    padding: 1.35rem 1.15rem;
+  }
+
+  .service-detail-card {
+    padding: 1.35rem 1.1rem;
+  }
+
+  .service-detail-card__header {
+    padding-bottom: 1.25rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .service-detail-card__body {
+    gap: 1.25rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .service-detail-card__value-banner {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 1.25rem 1.1rem;
+    gap: 1.1rem;
+  }
+
+  .service-detail-card__value-banner .btn,
+  .service-detail-card__footer .btn {
+    width: 100%;
+  }
+
+  .service-filter-bar {
+    gap: 0.5rem;
+  }
+
+  .service-filter-btn {
+    flex: 1 1 calc(50% - 0.5rem);
+    text-align: center;
+    padding: 0.6rem 0.75rem;
+    font-size: 0.7rem;
+  }
+
+  .cta-banner {
+    padding: 1.75rem 1.25rem;
+    gap: 1.5rem;
   }
 
   .hero__actions .btn,
-  .cta-banner__actions .btn {
+  .cta-banner__actions .btn,
+  .site-footer__cta-actions .btn,
+  .contact-form-card button[type='submit'] {
     width: 100%;
+  }
+
+  .site-footer__bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .site-footer__legal-links {
+    flex-wrap: wrap;
+    gap: 1rem;
   }
 }
 

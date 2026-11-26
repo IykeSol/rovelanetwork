@@ -247,14 +247,7 @@ export const ServicesPage: React.FC = () => {
 
                 <div className="service-detail-card__body">
                   {/* Relevant Capabilities */}
-                  <div
-                    style={{
-                      backgroundColor: 'var(--rovela-ivory)',
-                      padding: '1.65rem',
-                      borderRadius: 'var(--radius-sm)',
-                      border: '1px solid var(--border-on-ivory)'
-                    }}
-                  >
+                  <div className="service-detail-card__subpanel service-detail-card__subpanel--ivory">
                     <h4
                       className="h3-title"
                       style={{
@@ -304,14 +297,7 @@ export const ServicesPage: React.FC = () => {
                   </div>
 
                   {/* Practical Business Applications */}
-                  <div
-                    style={{
-                      backgroundColor: 'var(--rovela-sage-surface)',
-                      padding: '1.65rem',
-                      borderRadius: 'var(--radius-sm)',
-                      border: '1px solid var(--border-on-ivory)'
-                    }}
-                  >
+                  <div className="service-detail-card__subpanel service-detail-card__subpanel--sage">
                     <h4
                       className="h3-title"
                       style={{

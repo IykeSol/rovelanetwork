@@ -137,14 +137,7 @@ export const IndustriesPage: React.FC = () => {
 
                 <div className="service-detail-card__body">
                   {/* Opportunity Focus & Relevant Capabilities */}
-                  <div
-                    style={{
-                      backgroundColor: 'var(--rovela-ivory)',
-                      padding: '1.65rem',
-                      borderRadius: 'var(--radius-sm)',
-                      border: '1px solid var(--border-on-ivory)'
-                    }}
-                  >
+                  <div className="service-detail-card__subpanel service-detail-card__subpanel--ivory">
                     <h4 className="h3-title" style={{ marginBottom: '0.65rem' }}>
                       Strategic Opportunity Focus
                     </h4>
@@ -181,14 +174,7 @@ export const IndustriesPage: React.FC = () => {
                   </div>
 
                   {/* Practical Applications in Sector */}
-                  <div
-                    style={{
-                      backgroundColor: 'var(--rovela-sage-surface)',
-                      padding: '1.65rem',
-                      borderRadius: 'var(--radius-sm)',
-                      border: '1px solid var(--border-on-ivory)'
-                    }}
-                  >
+                  <div className="service-detail-card__subpanel service-detail-card__subpanel--sage">
                     <h4 className="h3-title" style={{ marginBottom: '1rem' }}>
                       Potential Value Applications
                     </h4>
@@ -225,17 +211,7 @@ export const IndustriesPage: React.FC = () => {
                   </div>
                 </div>
 
-                <div
-                  style={{
-                    display: 'flex',
-                    flexWrap: 'wrap',
-                    alignItems: 'center',
-                    justifyContent: 'space-between',
-                    gap: '1rem',
-                    paddingTop: '1.25rem',
-                    borderTop: '1px solid var(--border-on-ivory)'
-                  }}
-                >
+                <div className="service-detail-card__footer">
                   <span
                     style={{
                       fontSize: '0.875rem',
