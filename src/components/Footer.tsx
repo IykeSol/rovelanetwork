@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowUpRight, Mail, Globe, Clock } from 'lucide-react';
+import { ArrowUpRight, Mail, Globe } from 'lucide-react';
 import { RovelaLogo, RovelaSymbolSvg } from './RovelaLogo';
 import { SERVICES_DATA, SOCIAL_LINKS } from '../data/siteData';
 
@@ -179,13 +179,6 @@ export const Footer: React.FC = () => {
                 <div>
                   <span className="site-footer__contact-label">Website</span>
                   <a href="https://www.rovelanetwork.com">www.rovelanetwork.com</a>
-                </div>
-              </li>
-              <li>
-                <Clock size={16} className="site-footer__icon" aria-hidden="true" />
-                <div>
-                  <span className="site-footer__contact-label">Business Hours</span>
-                  <span>Mon to Fri, 9:00 AM to 6:00 PM</span>
                 </div>
               </li>
             </ul>

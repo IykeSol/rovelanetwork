@@ -3,7 +3,6 @@ import { useSearchParams, Link } from 'react-router-dom';
 import {
   Mail,
   Globe,
-  Clock,
   CheckCircle2,
   AlertCircle,
   Send,
@@ -356,45 +355,6 @@ export const ContactPage: React.FC = () => {
                       }}
                     >
                       Available for remote &amp; on-site client projects
-                    </p>
-                  </div>
-                </li>
-
-                <li className="contact-info-item">
-                  <span className="contact-info-item__icon">
-                    <Clock size={18} aria-hidden="true" />
-                  </span>
-                  <div>
-                    <span
-                      style={{
-                        display: 'block',
-                        fontFamily: 'var(--font-heading)',
-                        fontSize: '0.725rem',
-                        fontWeight: 600,
-                        letterSpacing: '0.14em',
-                        textTransform: 'uppercase',
-                        color: 'var(--rovela-gold)'
-                      }}
-                    >
-                      Business Hours
-                    </span>
-                    <span
-                      style={{
-                        fontWeight: 600,
-                        color: 'var(--rovela-ivory)',
-                        fontSize: '1rem'
-                      }}
-                    >
-                      Monday to Friday · 9:00 AM to 6:00 PM
-                    </span>
-                    <p
-                      style={{
-                        fontSize: '0.8125rem',
-                        color: 'var(--rovela-sage)',
-                        marginTop: '0.15rem'
-                      }}
-                    >
-                      Structured discovery sessions scheduled by appointment
                     </p>
                   </div>
                 </li>
