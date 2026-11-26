@@ -198,22 +198,40 @@ export const ServicesPage: React.FC = () => {
                 aria-labelledby={`heading-${service.slug}`}
               >
                 <div className="service-detail-card__header">
-                  <div style={{ maxWidth: '720px' }}>
+                  <div style={{ width: '100%' }}>
                     <div
                       style={{
                         display: 'flex',
                         alignItems: 'center',
+                        justifyContent: 'space-between',
                         gap: '0.75rem',
-                        marginBottom: '0.75rem'
+                        marginBottom: '1rem'
                       }}
                     >
-                      <span className="capability-card__index">
-                        CAPABILITY {service.index}
-                      </span>
-                      <span className="capability-card__group-tag">
-                        {service.categoryGroup}
-                      </span>
+                      <div
+                        style={{
+                          display: 'flex',
+                          flexWrap: 'wrap',
+                          alignItems: 'center',
+                          gap: '0.65rem'
+                        }}
+                      >
+                        <span className="capability-card__index">
+                          CAPABILITY {service.index}
+                        </span>
+                        <span className="capability-card__group-tag">
+                          {service.categoryGroup}
+                        </span>
+                      </div>
+
+                      <div
+                        className="capability-card__icon-box"
+                        style={{ width: '44px', height: '44px' }}
+                      >
+                        {SERVICE_ICONS[service.iconName]}
+                      </div>
                     </div>
+
                     <h3
                       id={`heading-${service.slug}`}
                       className="h1-title"
@@ -231,10 +249,6 @@ export const ServicesPage: React.FC = () => {
                     >
                       {service.tagline}
                     </p>
-                  </div>
-
-                  <div className="capability-card__icon-box" style={{ width: '52px', height: '52px' }}>
-                    {SERVICE_ICONS[service.iconName]}
                   </div>
                 </div>
 

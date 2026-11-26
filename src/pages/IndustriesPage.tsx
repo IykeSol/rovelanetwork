@@ -106,25 +106,32 @@ export const IndustriesPage: React.FC = () => {
                 aria-labelledby={`sector-heading-${sector.id}`}
               >
                 <div className="service-detail-card__header">
-                  <div>
-                    <span
-                      className="capability-card__index"
-                      style={{ display: 'inline-block', marginBottom: '0.65rem' }}
+                  <div style={{ width: '100%' }}>
+                    <div
+                      style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'space-between',
+                        gap: '0.75rem',
+                        marginBottom: '0.85rem'
+                      }}
                     >
-                      SECTOR {sector.index}
-                    </span>
+                      <span className="capability-card__index">
+                        SECTOR {sector.index}
+                      </span>
+                      <div
+                        className="capability-card__icon-box"
+                        style={{ width: '44px', height: '44px' }}
+                      >
+                        {INDUSTRY_ICONS[sector.iconName]}
+                      </div>
+                    </div>
                     <h3
                       id={`sector-heading-${sector.id}`}
                       className="h1-title"
                     >
                       {sector.title}
                     </h3>
-                  </div>
-                  <div
-                    className="capability-card__icon-box"
-                    style={{ width: '52px', height: '52px' }}
-                  >
-                    {INDUSTRY_ICONS[sector.iconName]}
                   </div>
                 </div>
 
