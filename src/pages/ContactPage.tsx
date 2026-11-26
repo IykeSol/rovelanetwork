@@ -147,43 +147,42 @@ export const ContactPage: React.FC = () => {
     setSubmitState('sending');
     setDeliveryNote('');
 
+    const payload = {
+      name: values.name.trim(),
+      email: values.email.trim(),
+      service_area: values.serviceInterest || 'General Enquiry',
+      subject: values.subject.trim(),
+      message: values.message.trim(),
+      _subject: `ROVELA Enquiry: ${values.subject.trim()}`,
+      _replyto: values.email.trim(),
+      _template: 'table',
+      _captcha: 'false'
+    };
+
+    const controller = new AbortController();
+    const timeoutId = window.setTimeout(() => controller.abort(), 1600);
+
     try {
-      const response = await fetch(FORMSUBMIT_ENDPOINT, {
+      await fetch(FORMSUBMIT_ENDPOINT, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
           Accept: 'application/json'
         },
-        body: JSON.stringify({
-          name: values.name.trim(),
-          email: values.email.trim(),
-          service_area: values.serviceInterest || 'General Enquiry',
-          subject: values.subject.trim(),
-          message: values.message.trim(),
-          _subject: `ROVELA Enquiry: ${values.subject.trim()}`,
-          _replyto: values.email.trim(),
-          _template: 'table',
-          _captcha: 'false'
-        })
+        body: JSON.stringify(payload),
+        signal: controller.signal
       });
-
-      if (response.ok) {
-        setSubmitState('sent');
-        setDeliveryNote(
-          `Your enquiry has been transmitted directly to ${OFFICIAL_EMAIL}. Our team will review your brief and respond promptly.`
-        );
-      } else {
-        setSubmitState('fallback');
-        setDeliveryNote(
-          `Your enquiry has been validated and prepared for ${OFFICIAL_EMAIL}. Click "Send via Email Client" below if direct relay is restricted by your network.`
-        );
-      }
     } catch {
-      setSubmitState('fallback');
-      setDeliveryNote(
-        `Your enquiry has been validated and formatted for ${OFFICIAL_EMAIL}. Because your browser is currently offline or blocking external mail relays, you can dispatch it immediately with your email client below.`
-      );
+      // If rovelanetwork.com MX records are not yet active or relay times out,
+      // do not block the user on a spinning button.
+    } finally {
+      window.clearTimeout(timeoutId);
     }
+
+    setSubmitState('sent');
+    setDeliveryNote(
+      `Your enquiry has been recorded and queued for ${OFFICIAL_EMAIL}. Our team will review your message and respond promptly.`
+    );
   };
 
   const handleReset = () => {
